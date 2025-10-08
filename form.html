@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation Form</title>
+    <link href="../CSS_LIBRARY/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/form.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <img src="../../pics/0635a3f5-e35c-413c-a1dc-bd32dc1e13b1.png" alt="">
+    </div>
+    <div class="container1">
+        <h3 class="text-center fw-bold fs-2" style="color:#b84214;">Register Now</h3>
+        <hr>
+
+        <form id="regForm" class="row g-3 mt-2 p-2" action="../../ADMIN/INTERFACE/confirm.php" method="post" novalidate>
+
+            <div class="col-md-6">
+                <label class="form-label">Firstname</label>
+                <input type="text" class="form-control" name="fname" required>
+                <div class="invalid-feedback">Please enter your firstname.</div>
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Lastname</label>
+                <input type="text" class="form-control" name="lname" required>
+                <div class="invalid-feedback">Please enter your lastname.</div>
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" name="email" required>
+                <div class="invalid-feedback">Please enter a valid email address.</div>
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Contact Number</label>
+                <input type="text" class="form-control" name="contact" pattern="[0-9]{11}" required>
+                <div class="invalid-feedback">Contact must be 11 digits.</div>
+            </div>
+
+            <div class="col-12">
+                <label class="form-label">Address</label>
+                <input type="text" class="form-control" name="address" required>
+                <div class="invalid-feedback">Please enter your address.</div>
+            </div>
+            <div class="col-12">
+                <label for="capacity" class="form-label">Person Capacity</label>
+                <select id="capacity" name="capacity" class="form-select" required>
+                   <option value="" disabled selected>Select capacity</option>
+                   <option value="50">50</option>
+                   <option value="100">100</option>
+                   <option value="150">150</option>
+                   <option value="200">200</option>
+                   <option value="250">250</option>
+                   <option value="300">300</option>
+                   </select>
+                <div class="invalid-feedback">Please select a Person Capacity.</div>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Event Type</label>
+                <select class="form-select" name="eventType" required>
+                   <option value="" disabled selected>Choose Event Type</option>
+                   <option value="Wedding">Wedding</option>
+                   <option value="Birthday">Birthday</option>
+                   <option value="Conference">Conference</option>
+                   <option value="Other">Other</option>
+                </select>
+                <div class="invalid-feedback">Please select an event type.</div>
+            </div>
+            <div class="col-md-3">
+                <label class="form-label">Event Date</label>
+                <input type="date" class="form-control" name="eventDate" required>
+                <div class="invalid-feedback">Please pick a date.</div>
+            </div>
+
+            <div class="col-md-3">
+                <label class="form-label">Event Time</label>
+                <select class="form-select" name="time" required>
+                    <option value="" disabled selected>-----</option>
+                    <option value="08:00:00">8am - 10am</option>
+                    <option value="11:00:00">11am - 1pm</option>
+                    <option value="14:00:00">2pm - 4pm</option>
+                    <option value="17:00:00">5pm - 7pm</option>
+                    <option value="20:00:00">8pm - 10pm</option>
+                    <option value="23:00:00">11pm - 1am</option>
+                </select>
+                <div class="invalid-feedback">Please select a time slot.</div>
+            </div>
+            <hr>
+            <div class="col-12">
+                <button id="submitBtn" type="button" class="btna btn w-100 ">Register</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="../JS_LIBRARY/sweetalert2.all.min.js"></script>
+    <script src="../JS_LIBRARY/bootstrap.bundle.min.js"></script>
+    <script src="../JS/form.js"></script>
+
+</body>
+
+</html>
